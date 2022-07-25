@@ -41,7 +41,7 @@ spec:
           parameters: [{name: message, value: run this job after data load in postres}]
       - name: validating-redis-keys
         depends: "load-data-in-redis"
-        template: echo-failre
+        template: echo-failure
         arguments:
           parameters: [{name: message, value: Validating Redis Keys}]
 
