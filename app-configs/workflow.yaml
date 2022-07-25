@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
-  name: cache-sync-redis
+  name: sync-redis-hackathon
   namespace: argo
 spec:
   entrypoint: data-load
