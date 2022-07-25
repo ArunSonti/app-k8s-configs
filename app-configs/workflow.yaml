@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
-  name: sync-redis-hackathon-2022.1
+  name: sync-redis-hackathon
   namespace: argo
 spec:
   entrypoint: data-load
@@ -41,7 +41,7 @@ spec:
           parameters: [{name: message, value: run this job after data load in postres}]
       - name: validating-redis-keys
         depends: "load-data-in-redis"
-        template: echo-failure
+        template: echo
         arguments:
           parameters: [{name: message, value: Validating Redis Keys}]
 
